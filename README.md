@@ -13,7 +13,7 @@ A patched version of the closed-source [PreLoader](https://github.com/LiteLDev/P
 #### For developers
  - Use PReloader to replace PreLoader, just add the repository in `xmake.lua`:
 ```lua
-add_repository("liteldev-free-repo https://github.com/liteldev-free/xmake-repo.git")
+add_repositories("liteldev-free-repo https://github.com/liteldev-free/xmake-repo.git")
 
 -- If you haven't imported the package yet...
 add_requires("preloader")
