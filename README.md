@@ -8,9 +8,26 @@ A patched version of the closed-source [PreLoader](https://github.com/LiteLDev/P
  - This is a patch directly on the original binary DLL, so no guarantees can be given, it should work as is.
  - If you encounter crashes, please file an issue or chat with us in the community.
 
-## About the use of IDA
- - If IDA can't identify a function correctly, tell it. (Press `P`)
- - If IDA can't disassemble correctly, tell it that too. (Press `C`)
+## Usage
+
+#### For developers
+ - Use PReloader to replace PreLoader, just add the repository in `xmake.lua`:
+```lua
+add_repository("liteldev-free-repo https://github.com/liteldev-free/xmake-repo.git")
+
+-- If you haven't imported the package yet...
+add_requires("preloader")
+
+-- Use it in your project....
+target("YourProj")
+    add_packages("preloader")
+```
+
+#### For reverse engineers
+ - If IDA can't disassemble or identify a function correctly, [Igor's tip](https://hex-rays.com/blog/igors-tip-of-the-week-152-force-creating-functions) is your friend.
+
+#### For regular users
+ - Just replace `PreLoader.dll`.
 
 ## Community
 
